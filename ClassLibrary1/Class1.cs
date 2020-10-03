@@ -2,8 +2,12 @@
 
 namespace CSharpTutA.cs
 {
-    public class Program
+    class Program
     {
 
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Leslie is here");
+        }
     }
 }
