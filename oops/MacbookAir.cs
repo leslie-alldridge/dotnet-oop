@@ -1,15 +1,26 @@
 using System;
-public class MacBookAir : Laptop
-{
-    public bool TouchScreen => false;
 
-    public void TurnOff()
+public class MacbookAir : Laptop
+{
+    public override void TurnOn()
     {
-        Console.WriteLine("Turning off Macbook Air");
+        this.BootROMLoaded();
+        this.BootROMRunning();
+        base.PowerOnSelfTest();
+        this.FindBooterFile();
+        Console.WriteLine("Turn on specific to Macbook Air");
     }
 
-    public void TurnOn()
+    private void BootROMLoaded()
     {
-        Console.WriteLine("Turning on Macbook Air");
+        Console.WriteLine("Boot ROM loaded.");
+    }
+    private void BootROMRunning()
+    {
+        Console.WriteLine("Boot ROM Running.");
+    }
+    private void FindBooterFile()
+    {
+        Console.WriteLine("FindBooterFile Running.");
     }
 }

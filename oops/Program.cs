@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace oops
 {
@@ -6,17 +7,11 @@ namespace oops
     {
         static void Main(string[] args)
         {
-            Laptop macbookAir = new MacBookAir();
             Laptop asusZenbook = new AsusZenbook();
-
-            macbookAir.TurnOn();
-            macbookAir.TurnOff();
+            Laptop macbookAir = new MacbookAir();
 
             asusZenbook.TurnOn();
-            asusZenbook.TurnOff();
-
-            Console.WriteLine(macbookAir.TouchScreen);
-            Console.WriteLine(asusZenbook.TouchScreen);
+            macbookAir.TurnOn();
 
         }
     }

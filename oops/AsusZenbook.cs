@@ -2,13 +2,30 @@ using System;
 
 public class AsusZenbook : Laptop
 {
-    public bool TouchScreen => true;
-    public void TurnOn()
+    public override void TurnOn()
     {
+        base.PowerOnSelfTest();
+        this.BIOSROM();
+        this.BootLoader();
+        this.OSConfig();
+        this.Security();
         Console.WriteLine("Turn on specific to Asus Zenbook");
     }
-    public void TurnOff()
+
+    private void BIOSROM()
     {
-        Console.WriteLine("Turning off Zenbook");
+        Console.WriteLine("BIOS ROM process");
+    }
+    private void BootLoader()
+    {
+        Console.WriteLine("BootLoader process");
+    }
+    private void OSConfig()
+    {
+        Console.WriteLine("OS config process");
+    }
+    private void Security()
+    {
+        Console.WriteLine("Security logon process");
     }
 }

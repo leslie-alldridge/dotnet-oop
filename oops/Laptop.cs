@@ -1,15 +1,12 @@
 using System;
-
-public interface Laptop
+public abstract class Laptop
 {
-    void TurnOn()
-    {
-        Console.WriteLine("Turning on.");
+    public abstract void TurnOn();
 
-    }
-    void TurnOff()
+    protected void PowerOnSelfTest()
     {
-        Console.WriteLine("Turning off.");
+        Console.WriteLine("Checking processors...");
+        Console.WriteLine("Checking system memory...");
+        Console.WriteLine("Checking network...");
     }
-    bool TouchScreen { get; }
 }
